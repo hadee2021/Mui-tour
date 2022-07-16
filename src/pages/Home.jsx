@@ -7,7 +7,6 @@ import {
 import TourCard from '../components/TourCard'
 import cities from '../data.json'
 
-
 const Home = () => {
   return (
     <div>
@@ -24,7 +23,7 @@ const Home = () => {
             </Typography>
             <Grid container spacing={5}>
               {city.tours.map((tour) => (
-                <TourCard tour={tour} key={tour.id} />
+                <TourCard tour={tour} key={tour.id}/>
               ))}
             </Grid>
           </>

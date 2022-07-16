@@ -8,6 +8,10 @@ import {
 } from '@mui/material'
 import {AccessTime} from '@mui/icons-material'
 import { createTheme, ThemeProvider } from '@mui/material'
+import { useNavigate } from 'react-router-dom'
+import { tourAtom } from '../Atom'
+import { useRecoilState } from 'recoil'
+
 
 const theme = createTheme({
   components: {
@@ -35,8 +39,16 @@ const theme = createTheme({
 })
 
 const TourCard = ({tour}) => {
+  const navigate = useNavigate()
+  const[tourState, setTourState] = useRecoilState(tourAtom)
+  
+  const goToDetail =() => {
+    setTourState(tour)
+    navigate('/go')
+  }
+  
   return (
-    <Grid item xs={3}>
+    <Grid item xs={3} sx={{cursor: 'pointer'}} onClick={goToDetail}>
       <ThemeProvider theme={theme}>
         <Paper elevation={3}>
           <img src={tour.image} className='img' />

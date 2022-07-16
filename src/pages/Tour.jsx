@@ -9,15 +9,18 @@ import {
 import ImageCollage from '../components/ImageCollage'
 import CustomizedAccordions from '../components/Accordian'
 import BasicModal from '../components/Modal'
+import { tourAtom } from '../Atom'
+import { useRecoilState } from 'recoil'
 
 const Tour = () => {
+  const[tourState] = useRecoilState(tourAtom)
   return (
     <Container sx={{ width: 900 }}>
       <Typography variant='h3' component='h1' marginTop={3}>
         Explore the World in Vegas
       </Typography>
       <Box marginTop={3} sx={{display: 'flex'}}>
-        <img src='/PIC/01폭포.png' height={250}/>
+        <img src={tourState.image} height={180}/>
         <ImageCollage />
       </Box>
       <Box>

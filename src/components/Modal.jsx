@@ -1,9 +1,9 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-import StaticDateRangePickerDemo from './DatePicker';
+import { Link } from 'react-router-dom'
+
 
 const style = {
   position: 'absolute',
@@ -24,7 +24,7 @@ export default function BasicModal() {
 
   return (
     <div>
-      <Button onClick={handleOpen}>BOOK NOW</Button>
+      <Button onClick={handleOpen}>Home Modal</Button>
       <Modal
         open={open}
         onClose={handleClose}
@@ -32,7 +32,7 @@ export default function BasicModal() {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <StaticDateRangePickerDemo />
+          <Link to='/'>Go to Home!!</Link>
         </Box>
       </Modal>
     </div>
