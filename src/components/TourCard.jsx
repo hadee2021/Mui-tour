@@ -7,12 +7,12 @@ import {
   Rating,
 } from '@mui/material'
 import {AccessTime} from '@mui/icons-material'
-import { createTheme, ThemeProvider } from '@mui/material'
+
 import { useNavigate } from 'react-router-dom'
 import { tourAtom } from '../Atom'
 import { useRecoilState } from 'recoil'
 
-
+import { createTheme, ThemeProvider } from '@mui/material'
 const theme = createTheme({
   components: {
     MuiTypography: {
