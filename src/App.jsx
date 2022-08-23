@@ -8,7 +8,7 @@ function App() {
     <div>
       <SearchAppBar />
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path='/:id' element={<Tour />} />
       </Routes>
     </div>
